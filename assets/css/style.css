@@ -1,0 +1,228 @@
+@font-face {
+    font-family: Titulo;
+    src:url(../fontes/ANODETONOONE.TTF);
+}
+
+body{
+    background-image: url(/assets/imgs/fundo.jpg);
+}
+
+h1 {
+    font-family: Titulo;
+    font-size: 30px;
+    color: #603a03
+}
+h2 {
+    font-family: Titulo;
+    font-size: 20px;
+    color: #603a03;
+}
+
+
+#container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    /* Dar uma olhada dps para ver como vai ficar a margin do container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fundo {
+    width: 950px;
+    height: 630px;
+    background-image: url(/assets/imgs/fundo_game.jpg);
+    border-color: whitesmoke;
+    border-style: solid;
+}
+
+#inicio {
+    width: 350px;
+    height: 209px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: darkred;
+    border-style: solid;
+}
+
+#player {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 179px;
+    background-image: url(/assets/imgs/apache.png);
+}
+
+#friendly {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+    left: 10px;
+    top: 464px;
+    background-image: url(/assets/imgs/amigo.png);
+}
+
+#enemyChopper { /*Helicóptero inimigo */
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 689px;
+    top: 253px;
+    background-image: url(/assets/imgs/inimigo1.png);
+}
+
+#enemyTruck { /*Caminhão inimigo */
+    width: 165px;
+    height: 70px;
+    position: absolute;
+    left: 775px;
+    top: 447px;
+    background-image: url(/assets/imgs/inimigo2.png);
+}
+
+.animaPlayer {
+    background-image: url(/assets/imgs/apache.png);
+    animation: play 500ms steps(2) infinite;
+    -webkit-animation: play 500ms steps(2) infinite;
+}
+@keyframes play {
+    from {background-position: 0px;}
+    to {background-position: -512px;}
+}
+
+@-webkit-keyframes play {
+    from {background-position: 0px;}
+    to {background-position: -512px;}
+}
+
+.animaEnemy {
+    background-image: url(/assets/imgs/inimigo1.png);
+    animation: playTwo 500ms steps(2) infinite;
+    -webkit-animation: playTwo 500ms steps(2) infinite;
+}
+
+.animaFriendly {
+    background-image: url(/assets/imgs/amigo.png);
+    animation: playTwo 900ms steps(12, end) infinite;
+    -webkit-animation: playTwo 900ms steps(12, end) infinite;
+}
+
+@keyframes playTwo {
+    from {background-position: 0px;}
+    to {background-position: -528px;}
+}
+
+@-webkit-keyframes playTwo {
+    from {background-position: 0px;}
+    to {background-position: -528px;}
+}
+
+#projectile {
+    width: 50px;
+    height: 8px;
+    position: absolute;
+    background-image: url(/assets/imgs/disparo.png);
+}
+
+#explosionOne {
+    height: 87px;
+    position: absolute;
+    background-image: url(/assets/imgs/explosao.png);
+    animation-name: playExplosionOne;
+    animation-duration: 1000ms;
+
+}
+
+
+@keyframes playExplosionOne {
+    from {width: 0px; opacity: 100%;}
+    to {width: 225px; opacity: 0%;}
+}
+
+@-webkit-keyframes playExplosionOne {
+    from {width: 0px; opacity: 100%;}
+    to {width: 225px; opacity: 0%;}
+}
+
+#explosionTwo {
+    height: 87px;
+    position: absolute;
+    background-image: url(/assets/imgs/explosao.png);
+    animation-name: playExplosionTwo;
+    animation-duration: 1000ms;
+}
+
+@keyframes playExplosionTwo {
+    from {width: 0px; opacity: 100%;}
+    to {width: 225px; opacity: 0%;}
+}
+
+@-webkit-keyframes playExplosionTwo {
+    from {width: 0px; opacity: 100%;}
+    to {width: 225px; opacity: 0%;}
+}
+
+#friendlyDeath {
+    width: 44px;
+	height: 51px;
+	position: absolute;
+    background-image: url(/assets/imgs/amigo_morte.png);
+    animation: playThree 500ms steps(7, end) infinite;
+    -webkit-animation: playThree 500ms steps(7, end) infinite;
+}
+
+@keyframes playThree {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+@-webkit-keyframes playThree {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+#scoreboard {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 20px;
+	top: 570px;
+    font-family: Titulo;
+	font-size:20px;
+	color: white;
+}
+
+#energy {
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 750px;
+	top: 7px;	
+    background-image: url(/assets/imgs/energia3.png);
+}
+
+#fim {
+	width:350px;
+	height:200px;
+	background-color: whitesmoke;
+ 	margin-left:auto;
+    margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+    border-radius: 10px;
+    border-color: darkred;
+    border-style: solid;
+}
+h4 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#603A03;
+
+}
